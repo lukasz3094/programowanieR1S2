@@ -1,0 +1,154 @@
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.article-wrapper {
+  width: calc(100% - 2rem);
+  z-index: 100;
+  animation: slide 0.5s;
+  padding-inline: 1rem; 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.article-bottom {
+  margin-top: 0.8rem;
+}
+
+.article-block {
+  width: 28%;
+  height: 22vh;
+  padding: 1rem;
+  margin-bottom: 5vh;
+  border-radius: 10px;
+  line-height: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #ffffffc7;
+  color: #141414;
+  font-size: 0.9rem;
+  letter-spacing: 0.02rem;
+}
+
+table {
+  padding: 1rem;
+}
+
+th {
+  padding-bottom: 1rem;
+}
+
+td {
+  text-align: center;
+}
+
+.article-block h4 {
+  text-align: center;
+  letter-spacing: 0.07rem;
+  font-size: 1.2rem;
+  margin: 0.5em 0;
+}
+
+.article-last {
+  width: 100%;
+  padding: 2rem 0 0;
+  margin: auto;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.article-last h4 {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 0;
+  letter-spacing: 0.07rem;
+}
+
+.article-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4rem;
+  padding-bottom: 1rem;
+}
+
+.form-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.8rem;
+  min-width: 50vw;
+}
+
+.form-col input {
+  margin-top: 0.2rem;
+  width: 40%;
+  border-radius: 5px;
+  border: 1px solid #141414;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.02rem;
+  border-radius: 10px;
+  border: 0.5px dashed black;
+}
+
+.form-col input[type="submit"] {
+  background-color: #0a21a0;
+  color: white;
+  border: 0;
+  border-radius: 10px;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.02rem;
+  cursor: pointer;
+}
+
+.form-col input[type="submit"]:hover {
+  background-color: #071980;
+}
+
+@media (max-width: 1280px) {
+  section:first-of-type {
+    height: 25vh;
+  }
+
+  .article-wrapper {
+    align-items: stretch;
+  }
+
+  .article-block {
+    width: 40%;
+    height: auto;
+  }
+
+  .form-col input {
+    width: 60%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .article-block {
+    width: 90% !important;
+  }
+
+  .form-col input {
+    width: 80%;
+  }
+}
